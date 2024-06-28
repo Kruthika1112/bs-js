@@ -1,0 +1,96 @@
+</form>
+
+<div id="output-image-container" class="hidden mt-4">
+    <img src="./train.png" alt="Output Image">
+</div>
+</div>
+
+<script>
+function validate(event) {
+    event.preventDefault();
+
+    var firstName = document.getElementById("i1").value;
+    var lastName = document.getElementById("i2").value;
+    var email = document.getElementById("i3").value;
+    var password = document.getElementById("i4").value;
+    var rePassword = document.getElementById("i5").value;
+    var age = document.getElementById("i6").value;
+    var phoneNumber = document.getElementById("i7").value;
+    var address = document.getElementById("i8").value;
+    var state = document.getElementById("i9").value;
+
+    var isValid = true;
+
+    if (firstName.trim() === "") {
+        document.getElementById("firstname-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("firstname-check").textContent = "";
+    }
+
+    if (lastName.trim() === "") {
+        document.getElementById("lastname-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("lastname-check").textContent = "";
+    }
+
+    if (email.trim() === "") {
+        document.getElementById("email-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("email-check").textContent = "";
+    }
+
+    if (password.trim() === "") {
+        document.getElementById("password-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("password-check").textContent = "";
+    }
+
+    if (rePassword.trim() === "" || rePassword !== password) {
+        document.getElementById("re-password-check").textContent = "POOR OR MISMATCH";
+        isValid = false;
+    } else {
+        document.getElementById("re-password-check").textContent = "";
+    }
+
+    if (age.trim() === "") {
+        document.getElementById("age-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("age-check").textContent = "";
+    }
+
+    if (phoneNumber.trim() === "") {
+        document.getElementById("phone-number-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("phone-number-check").textContent = "";
+    }
+
+    if (address.trim() === "") {
+        document.getElementById("address-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("address-check").textContent = "";
+    }
+
+    if (state.trim() === "") {
+        document.getElementById("state-check").textContent = "POOR";
+        isValid = false;
+    } else {
+        document.getElementById("state-check").textContent = "";
+    }
+
+    if (isValid) {
+        alert("Form submitted successfully!");
+    } else {
+        alert("Please fix the errors in the form.");
+    }
+}
+</script>
+</body>
+
+</html>
